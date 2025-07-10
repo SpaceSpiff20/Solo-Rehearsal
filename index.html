@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Line Runner</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+    <div id="app">
+        <!-- LEFT-HAND PANEL -->
+        <div id="controls">
+            <h1>The Solo Line Runner</h1>
+            <h4>Powered by Speechify API</h4>
+
+            <div class="form-row">
+                <input type="file" id="fileInput" accept=".txt" hidden />
+                <label for="fileInput" class="btn">Upload Script</label>
+                <span id="fileName" class="filename"></span>
+            </div>
+
+            <div class="form-row">
+                <label for="characterSelect">I will read as:</label>
+                <select id="characterSelect" disabled>
+                <option value="" disabled selected>Select your character</option>
+                </select>
+            </div>
+
+            <button id="startBtn" disabled>Start Practice</button>
+        </div>
+
+        <!-- RIGHT-HAND PANEL -->
+        <div id="cueContainer" class="hidden">
+            <p id="cueLine" class="cue-line"></p>
+            <p class="hint"><kbd>Space</kbd> for next cue</p>
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
